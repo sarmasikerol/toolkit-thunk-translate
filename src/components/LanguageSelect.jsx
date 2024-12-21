@@ -7,6 +7,7 @@ const LanguageSelect = ({
   setTargetLang,
   sourceLang,
   targetLang,
+  handleSwap,
 }) => {
   const { isLoading, error, langs } = useSelector((store) => store.lang);
 
@@ -32,7 +33,10 @@ const LanguageSelect = ({
         options={formatted}
         className="flex-1"
       />
-      <button className="bg-zinc-700 py-2 px-6 hover:bg-zinc-800 transition rounded text-white">
+      <button
+        onClick={handleSwap}
+        className="bg-zinc-700 py-2 px-6 hover:bg-zinc-800 transition rounded text-white"
+      >
         Değiş
       </button>
 
