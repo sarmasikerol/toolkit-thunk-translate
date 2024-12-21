@@ -15,7 +15,7 @@ const App = () => {
     label: "English",
     value: "en",
   });
-  const [text, setText] = useState();
+  const [text, setText] = useState("");
 
   useEffect(() => {
     dispatch(getLangs());
